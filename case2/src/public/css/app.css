@@ -1,0 +1,167 @@
+.container {
+    background-color: #f2f2f2;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.menu-btn {
+    position: relative;
+    z-index: 9999;
+    margin-left: 100px;
+    background: #0068FF;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px -4px rgb(0, 0, 0, 0.6);
+}
+
+.menu-btn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 13px;
+    height: 2px;
+    background-color: #FFFFFF;
+}
+
+.menu-btn span:nth-of-type(1) {
+    top: 15px;
+    width: 12px;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: 23px;
+    width: 24px;
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: 31px;
+    width: 6px;
+}
+
+.menu-btn.active span:nth-of-type(1) {
+    top:18px;
+    left: 18px;
+    transform: translateY(6px)
+    rotate(-45deg);
+    width: 30%;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px)
+    rotate(-45deg);
+    width: 30%;
+}
+
+.nav-content {
+    position: fixed;
+    z-index: 999;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    transition: all 0.6s;
+}
+
+.nav-content.panelactive {
+    top: 0;
+}
+
+.nav-content ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-content li {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-content li a {
+    color: #0068FF;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 30px;
+}
+
+.header-ttl {
+    color: #0068FF;
+    margin-left: 20px;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 30%;
+    background-color: #ffffff;
+}
+
+.main-ttl {
+    background-color: #0068FF;
+    color: #ffffff;
+    text-align: left;
+    padding: 20px 20px;
+}   
+
+.register-container,
+.login-container {
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px -4px rgb(0, 0, 0, 0.6);
+}
+
+.register-form,
+.login-form {
+    padding: 20px 20px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #808080;
+    margin-bottom: 15px;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.input-container {
+    display: flex;
+}
+
+.btn-container input {
+    background-color: #0068FF;
+    width: 70px;
+    height: 35px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-container {
+    margin-top: 20px;
+    text-align: right;
+}
